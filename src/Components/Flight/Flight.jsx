@@ -36,8 +36,8 @@ export default function Flight(children) {
     </div>
   ) : (
     <div className="Productitems">
-      {product.map((e) => {
-        return <Product e={e} />;
+      {product.map((e,index) => {
+        return <Product key={index} e={e} />;
       })}
     </div>
   );

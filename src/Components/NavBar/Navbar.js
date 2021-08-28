@@ -10,6 +10,10 @@ const NAVBAR = styled.div`
   padding-bottom: 15px;
   box-shadow: 0 0 1px 1px grey;
   width: 100%;
+
+  h1 {
+    background-color: white;
+  }
 `;
 
 

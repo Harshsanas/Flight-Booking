@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import styled from "styled-components"
 
 const INPUTFORM = styled.div`
-  margin-top: 50px;
   width: 25%;
   border: 1px solid black;
   position: fixed;
@@ -34,7 +33,7 @@ const INPUTFORM = styled.div`
     cursor: pointer;
     height: 35px;
     padding: 5px;
-    margin:20px 0 20px 20px;
+    margin: 20px 0 20px 20px;
   }
 
   button:hover {
@@ -50,37 +49,66 @@ const INPUTFORM = styled.div`
   }
 `;
 
-export default function Form({ handleChange,handleSubmit }) {
+export default function Form({setCityName}) {
 
-  const details ={ 
-    origincity:"",
-    destinationcity:"",
-    departdate:"",
-    returndate:"",
-    passenger:"",
+  
+  const [formData,setFormData] =useState("")
+
+  const handleChange=(e) => {
+    const {name,value}=e.target;
+
+    setFormData({...formData, [name]: value});
   }
 
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    setCityName(formData)
+  };
+
+  console.log(formData)
   return (
-    <div>
+    <div style={{ marginTop: "50px" }}>
+      <button
+        style={{
+          background: "none",
+          border: "1px solid grey",
+          cursor: "pointer",
+        }}
+      >
+        SINGLE JOURNEY
+      </button>
+      <button
+        style={{
+          background: "none",
+          border: "1px solid grey",
+          cursor: "pointer",
+        }}
+      >
+        RETURN JOURNEY
+      </button>
       <INPUTFORM>
         <form onSubmit={handleSubmit}>
           <input
             type="text"
             placeholder="Enter Origin City"
             onChange={handleChange}
+            name="origincity"
           />
           <br />
           <input
             type="text"
             placeholder="Enter Destincation City"
             onChange={handleChange}
+            name="destinationcity"
           />
           <p>DEPARTURE DATE</p>
           <input
             type="date"
             id="start"
-            name="trip-start"
-            min="2021-08-27"
+            name="tripstart"
+            min="2021-08-28"
             max="2025-12-31"
             onChange={handleChange}
           />
@@ -88,8 +116,8 @@ export default function Form({ handleChange,handleSubmit }) {
           <input
             type="date"
             id="start"
-            name="trip-start"
-            min="2021-08-27"
+            name="tripend"
+            min="2021-08-28"
             onChange={handleChange}
             max="2025-12-31"
           />
