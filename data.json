@@ -45,10 +45,10 @@
       "image": "https://static.toiimg.com/thumb/75735879/flight.jpg?width=1200&height=900"
     },{
       "id": 4,
-      "cityname1": "Pune",
-      "cityname2": "Mumbai",
-      "city1": "PNQ",
-      "city2": "MUM",
+      "cityname1": "MUMBAI",
+      "cityname2": "PUNE",
+      "city1": "MUM",
+      "city2": "PNQ",
       "price": "8500",
       "depart_time": "10:00 AM",
       "arrive_time": "12:00 AM",
@@ -87,10 +87,10 @@
       "image": "https://static.toiimg.com/thumb/75735879/flight.jpg?width=1200&height=900"
     },{
       "id": 7,
-      "cityname1": "Pune",
-      "cityname2": "Mumbai",
+      "cityname1": "DELHI",
+      "cityname2": "HYDERABAD",
       "city1": "DEL",
-      "city2": "PNQ",
+      "city2": "HYD",
       "price": "9500",
       "depart_time": "8:00 AM",
       "arrive_time": "9:00 AM",
@@ -101,17 +101,17 @@
       "image": "https://static.toiimg.com/thumb/75735879/flight.jpg?width=1200&height=900"
     },{
       "id": 8,
-      "cityname1": "Pune",
-      "cityname2": "Mumbai",
-      "city1": "DEL",
+      "cityname1": "KOLKATA",
+      "cityname2": "PUNE",
+      "city1": "KKT",
       "city2": "PNQ",
       "price": "9500",
       "depart_time": "8:00 AM",
       "arrive_time": "9:00 AM",
       "return_depart_time": "8:00 AM",
       "return_arrive_time": "9:00 AM",
-      "flightno": "A-201",
-      "return_flight": "A-205",
+      "flightno": "P-201",
+      "return_flight": "P-205",
       "image": "https://static.toiimg.com/thumb/75735879/flight.jpg?width=1200&height=900"
     },{
       "id": 9,
@@ -124,8 +124,8 @@
       "arrive_time": "11:00 AM",
       "return_depart_time": "5:00 PM",
       "return_arrive_time": "9:00 PM",
-      "flightno": "A-201",
-      "return_flight": "A-205",
+      "flightno": "D-201",
+      "return_flight": "D-205",
       "image": "https://static.toiimg.com/thumb/75735879/flight.jpg?width=1200&height=900"
     },{
       "id": 10,
@@ -138,8 +138,8 @@
       "arrive_time": "15:00 PM",
       "return_depart_time": "17:00 PM",
       "return_arrive_time": "21:00 PM",
-      "flightno": "A-201",
-      "return_flight": "A-205",
+      "flightno": "D-702",
+      "return_flight": "D-703",
       "image": "https://static.toiimg.com/thumb/75735879/flight.jpg?width=1200&height=900"
     }
   ]

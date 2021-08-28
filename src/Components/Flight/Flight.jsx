@@ -1,9 +1,12 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
+import { FlightContext } from "./FlightContextProvider";
 import Product from "./Product"
 
 export default function Flight(children) {
   const [product, setProduct] = useState([]);
+
+  const{city}=useContext(FlightContext);
 
   const [isLoading, setIsLoading] = useState(true);
 
@@ -25,7 +28,15 @@ export default function Flight(children) {
     }
   };
   console.log(product);
+  console.log("CityContext",city)
 
+  const filtercity=(item)=>{
+    
+    if(city.length != 0){
+      return city[0] == item.cityname1 && city[1] == item.cityname2;
+    }
+    return true;
+  }
   return isLoading ? (
     <div>
       <h1 style={{ textAlign: "center" }}>PAGE LOADING</h1>
@@ -36,7 +47,7 @@ export default function Flight(children) {
     </div>
   ) : (
     <div className="Productitems">
-      {product.map((e,index) => {
+      {product.filter(filtercity).map((e,index) => {
         return <Product key={index} e={e} />;
       })}
     </div>
